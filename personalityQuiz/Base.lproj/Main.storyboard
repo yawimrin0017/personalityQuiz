@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -209,14 +210,29 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eam-3J-ICe">
+                                <rect key="frame" x="20" y="84" width="335" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bRq-ZE-uUu">
+                                <rect key="frame" x="16" y="645" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bRq-ZE-uUu" firstAttribute="leading" secondItem="OGN-9H-8ZW" secondAttribute="leadingMargin" id="7Y2-CM-goi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bRq-ZE-uUu" secondAttribute="trailing" id="Db7-fx-Ueo"/>
                             <constraint firstItem="H0x-9z-3oM" firstAttribute="leading" secondItem="uGD-BZ-N3g" secondAttribute="leading" constant="20" id="Erj-m3-B0f"/>
+                            <constraint firstItem="uGD-BZ-N3g" firstAttribute="trailing" secondItem="eam-3J-ICe" secondAttribute="trailing" constant="20" id="FDd-ZH-ydB"/>
+                            <constraint firstItem="eam-3J-ICe" firstAttribute="top" secondItem="uGD-BZ-N3g" secondAttribute="top" constant="20" id="G2q-Wx-p3l"/>
                             <constraint firstItem="uGD-BZ-N3g" firstAttribute="trailing" secondItem="3xm-90-IFz" secondAttribute="trailing" constant="20" id="MiZ-56-g5v"/>
+                            <constraint firstItem="uGD-BZ-N3g" firstAttribute="bottom" secondItem="bRq-ZE-uUu" secondAttribute="bottom" constant="20" id="RYN-6s-X3i"/>
                             <constraint firstItem="hVa-PL-LcB" firstAttribute="leading" secondItem="uGD-BZ-N3g" secondAttribute="leading" constant="20" id="UUu-XD-acm"/>
                             <constraint firstItem="3xm-90-IFz" firstAttribute="leading" secondItem="uGD-BZ-N3g" secondAttribute="leading" constant="20" id="VR7-cl-o8m"/>
                             <constraint firstItem="hVa-PL-LcB" firstAttribute="centerY" secondItem="OGN-9H-8ZW" secondAttribute="centerY" id="dDR-FF-rwF"/>
+                            <constraint firstItem="eam-3J-ICe" firstAttribute="leading" secondItem="uGD-BZ-N3g" secondAttribute="leading" constant="20" id="dI8-Jd-uJf"/>
                             <constraint firstItem="H0x-9z-3oM" firstAttribute="centerY" secondItem="OGN-9H-8ZW" secondAttribute="centerY" id="itu-Vt-0oA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGD-BZ-N3g"/>
@@ -224,6 +240,7 @@
                             <mask key="subviews">
                                 <exclude reference="hVa-PL-LcB"/>
                                 <exclude reference="3xm-90-IFz"/>
+                                <exclude reference="H0x-9z-3oM"/>
                             </mask>
                         </variation>
                     </view>
